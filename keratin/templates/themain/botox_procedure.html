@@ -1,0 +1,112 @@
+{% include "base.html" %}
+{% load static %}
+  <body>
+    <nav class="main-nav-outer" id="test">
+      <!--main-nav-start-->
+      <div class="container">
+        <ul class="main-nav">
+          <li>
+            <a href="{% url 'themain:index' %}">Главная страница</a>
+          </li>
+          <li>
+            <a href="{% url 'themain:keratin_procedure' %}">Кератин</a>
+          </li>
+          <li>
+            <a href="{% url 'themain:nano_plastic_procedure' %}">
+                Нанопластика</a>
+          </li>
+          <li class="small-logo">
+            <!-- <a href="#header">
+              <img src="{% static 'img/small-logo.png' %}" alt="">
+            </a>-->
+          </li>
+          <li>
+            <a href="#client">Отзывы</a>
+          </li>
+          <li>
+            <a href="#team">Цены</a>
+          </li>
+          <li>
+            <a href="#contact">Контакты</a>
+          </li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+      </div>
+    </nav>
+    <!--main-nav-end-->
+    <section class="main-section" id="service">
+      <!--main-section-start-->
+      <div class="container">
+        <h2>Ботоксное разглаживание</h2>
+        <br>
+        <h3>Когда спутниками волос стали сухость, сечение, ломкость и
+            спутанность, лучшее решение это  -  ботокс.</h3>
+          <br>
+          <br>
+        <div class="row">
+          <br>
+          <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="service-list-col2"><font size="4">
+                <p>
+                  После услуги вы получите гладкие волосы без намека на
+                  пушистость. Они будут мягкими и шелковистыми, перестанут
+                  отламываться и сечься.
+                </p> </font>
+                <br>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="service-list-col2"><font size="4">
+                <p>
+                  Волосы будут блестеть, легко и безболезненно распутываться,
+                  быстро укладываться в красивую прическу даже после 5 минут
+                  сушки одним лишь феном.
+                </p> </font>
+                <br>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="service-list-col2"><font size="4">
+                <p>
+                  Эффект сохранится на несколько месяцев после первой же
+                  процедуры.
+                </p> </font>
+                <br>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="service-list-col2"><font size="4">
+                <p>
+                  Важно! Ботокс не выпрямляет, а разглаживает волосы. Для
+                  желающих избавиться от завитка лучше подойдет
+                  <a href="{% url 'themain:keratin_procedure' %}">кератиновое
+                  выпрямление.</a>
+                </p> </font>
+                <br>
+              </div>
+            </div>
+          </div>
+          <figure class="col-lg-7 col-sm-2  text-right wow fadeInUp delay-02s">
+            <img src="{% static 'img/botox.jpg' %}" >
+          </figure>
+        </div>
+      </div>
+    </section>
+    </body>
+    <!--main-section-end-->
+    <!--business-talking-end-->
+    {% include "themain/includes/contacts.html" %}
+    {% include "themain/includes/main_js.html" %}

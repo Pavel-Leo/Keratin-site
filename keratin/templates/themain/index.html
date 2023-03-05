@@ -1,48 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% include "base.html" %}
 {% load static %}
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <!-- Сайт готов работать с мобильными устройствами -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-    <link rel="shortcut icon"
-          href="{% static 'img/favicon.ico' %}"
-          type="img/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700'
-          rel='stylesheet'
-          type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
-          rel='stylesheet'
-          type='text/css'>
-    <link href="{% static 'css/bootstrap.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/font-awesome.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% static 'css/responsive.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% static 'css/magnific-popup.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <link href="{% static 'css/animate.css' %}"
-          rel="stylesheet"
-          type="text/css">
-    <script type="text/javascript" src="{% static 'js/jquery.1.8.3.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
-    <script type="text/javascript"
-            src="{% static 'js/jquery-scrolltofixed.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/wow.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/magnific-popup.js' %}"></script>
-    <script src="{% static 'contactform/contactform.js' %}"></script>
-    <title>Главная страница</title>
-  </head>
   <body>
     <header class="header" id="header">
       <!--header-start-->
@@ -58,7 +15,7 @@
             <h4>Кератин, ботокс, нанопластика.</h4>
           </li>
         </ul>
-        <a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
+        <a class="link animated fadeInUp delay-1s servicelink" href="#service">подробнее</a>
       </div>
     </header>
     <!--header-end-->
@@ -76,16 +33,16 @@
             <a href="#Portfolio">Портфолио</a>
           </li>
           <li class="small-logo">
-            <a href="#header">
+            <!-- <a href="#header">
               <img src="{% static 'img/small-logo.png' %}" alt="">
-            </a>
+            </a>-->
           </li>
           <li>
             <a href="#client">Отзывы</a>
           </li>
-          <!--<li>
-            <a href="#team">Team</a>
-          </li>-->
+          <li>
+            <a href="#team">Цены</a>
+          </li>
           <li>
             <a href="#contact">Контакты</a>
           </li>
@@ -97,55 +54,66 @@
     <section class="main-section" id="service">
       <!--main-section-start-->
       <div class="container">
-        <h2>Services</h2>
-        <h6>We offer exceptional service with complimentary hugs.</h6>
+        <h2>Услуги</h2>
+        <h6>Вы все еще сомневаетесь какая процедура необходима именно вам?
+          Разберем подробнее каждую, и подберем лучший вариант.
+        </h6>
         <div class="row">
           <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
             <div class="service-list">
               <div class="service-list-col1">
-                <i class="fa fa-paw"></i>
+                <i class="fa fa-hand-o-right"></i>
               </div>
               <div class="service-list-col2">
-                <h3>branding &amp; identity</h3>
-                <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
-              </div>
-            </div>
-            <div class="service-list">
-              <div class="service-list-col1">
-                <i class="fa fa-gear"></i>
-              </div>
-              <div class="service-list-col2">
-                <h3>web development</h3>
-                <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora .</p>
-              </div>
-            </div>
-            <div class="service-list">
-              <div class="service-list-col1">
-                <i class="fa fa-apple"></i>
-              </div>
-              <div class="service-list-col2">
-                <h3>mobile design</h3>
-                <p>
-                  Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.
+                <h3>Кератиновое выпрямление</h3>
+                <p><a href="{% url 'themain:keratin_procedure' %}">
+                  5 причин сделать кератиновое выпрямление и вычеркнуть проблемы
+                  с волосами из своей жизни.</a>
                 </p>
               </div>
             </div>
             <div class="service-list">
               <div class="service-list-col1">
-                <i class="fa fa-medkit"></i>
+                <i class="fa fa-hand-o-right"></i>
               </div>
               <div class="service-list-col2">
-                <h3>
-                  24/7 Support
-                </h3>
+                <h3>Ботоксное разглаживание</h3>
+                <p><a href="{% url 'themain:botox_procedure' %}">
+                  Сухость, сечение, ломкость и спутанность волос. Знакомо?
+                  Пора принимать меры! Со всеми перечисленными проблемами
+                  поможет справиться ботокс.</a>
+                </p>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-hand-o-right"></i>
+              </div>
+              <div class="service-list-col2">
+                <h3>Нанопластика</h3>
+                <a href="{% url 'themain:nano_plastic_procedure' %}">
                 <p>
-                  Proin iaculis purus consequat sem digni ssim. Sem porttitora entum.
+                  Что такое нанопластика волос, когда ее следует применять и в чем
+                  ее ключевые отличия от других
+                  подобных процедур для выпрямления волос. Разберем подробнее...</a>
+                </p>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-list-col1">
+                <i class="fa fa-hand-o-right"></i>
+              </div>
+              <div class="service-list-col2">
+                <h3>Советы по уходу за волосами</h3>
+                <p>
+                  Как поддержать эффект и продлить действие процедур?
+                  Читай полезные советы.
                 </p>
               </div>
             </div>
           </div>
           <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-            <img src="{% static 'img/macbook-pro.png' %}" alt="">
+            <img src="{% static 'img/main1.jpg' %}" alt="">
           </figure>
         </div>
       </div>
@@ -156,52 +124,86 @@
       <div class="container">
         <div class="row">
           <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-            <img src="{% static 'img/iphone.png' %}" alt="">
+            <img src="{% static 'img/hair_problems.jpg' %}" alt="">
           </figure>
-          <div class="col-lg-7 col-sm-8 featured-work">
+          <div class="col-lg-7 col-sm-9 featured-work">
             <h2>
-              featured work
+              Кератин и ботокс только для кудрявых волос?
             </h2>
-            <P class="padding-b">
-              Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.
-            </P>
+            <p class="padding-b"><font size="4">
+              Конечно, нет! Процедуры по восстановлению и реконструкции
+              волос (кератин, ботокс, нанопластика) создавались не
+              только для кудрявых волос. Процедуры помогут решить проблемы
+              разных типов волос. Если вас не устраивает хоть один из пунктов
+              ниже, то вам поможет одна из процедур. Какую выбрать? Запишитесь
+              на консультацию и мы подберем оптимальную процедуру конкретно для
+              вашего типа волос.
+            </p>
             <div class="featured-box">
               <div class="featured-box-col1 wow fadeInRight delay-02s">
-                <i class="fa fa-magic"></i>
+                <i class="fa fa-circle"></i>
               </div>
               <div class="featured-box-col2 wow fadeInRight delay-02s">
                 <h3>
-                  magic of theme development
+                  <p>Волосы прямые, но очень пушатся или потеряли блеск.</p>
+                  Сухие, ломкие или секущиеся кончики.
                 </h3>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
-                </p>
               </div>
             </div>
             <div class="featured-box">
               <div class="featured-box-col1 wow fadeInRight delay-04s">
-                <i class="fa fa-gift"></i>
+                <i class="fa fa-circle"></i>
               </div>
               <div class="featured-box-col2 wow fadeInRight delay-04s">
                 <h3>
-                  neatly packaged
+                  <p>Не получается отрастить волосы. </p>
+                  Стрижете кончики каждый месяц, но они секутся.
                 </h3>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
-                </p>
               </div>
             </div>
             <div class="featured-box">
               <div class="featured-box-col1 wow fadeInRight delay-06s">
-                <i class="fa fa-dashboard"></i>
+                <i class="fa fa-circle"></i>
               </div>
               <div class="featured-box-col2 wow fadeInRight delay-06s">
                 <h3>
-                  SEO optimized
+                  <p>Волосы потеряли свой привычный вид или испорчены</p>
+                  после осветления или окрашивания.
                 </h3>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
-                </p>
+              </div>
+            </div>
+              <div class="featured-box">
+              <div class="featured-box-col1 wow fadeInRight delay-06s">
+                <i class="fa fa-circle"></i>
+              </div>
+              <div class="featured-box-col2 wow fadeInRight delay-06s">
+                <h3>
+                  <p>Волосы сильно вьются иливьются только на концах .</p>
+                  Вы обладательница афро кудрей.
+
+                </h3>
+              </div>
+            </div>
+            <div class="featured-box">
+              <div class="featured-box-col1 wow fadeInRight delay-06s">
+                <i class="fa fa-circle"></i>
+              </div>
+              <div class="featured-box-col2 wow fadeInRight delay-06s">
+                <h3>
+                  Волосы по длине полностью устраивают, но концы смотрят
+                  в разные стороны.
+                </h3>
+              </div>
+            </div>
+            <div class="featured-box">
+              <div class="featured-box-col1 wow fadeInRight delay-06s">
+                <i class="fa fa-circle"></i>
+              </div>
+              <div class="featured-box-col2 wow fadeInRight delay-06s">
+                <h3>
+                  Не можете сделать красивый хвост, потому что волосы торчат
+                  в разные стороны.
+                </h3>
               </div>
             </div>
             <a class="Learn-More" href="#">Learn More</a>
@@ -477,121 +479,7 @@
       </div>
     </section>
     <!--business-talking-end-->
-    <div class="container">
-      <section class="main-section contact" id="contact">
-        <div class="row">
-          <div class="col-lg-6 col-sm-7 wow fadeInLeft">
-            <div class="contact-info-box address clearfix">
-              <h3>
-                <i class=" icon-map-marker"></i>Address:
-              </h3>
-              <span>308 Negra Arroyo Lane
-                <br>
-              Albuquerque, New Mexico, 87111.</span>
-            </div>
-            <div class="contact-info-box phone clearfix">
-              <h3>
-                <i class="fa fa-phone"></i>Phone:
-              </h3>
-              <span>1-800-BOO-YAHH</span>
-            </div>
-            <div class="contact-info-box email clearfix">
-              <h3>
-                <i class="fa fa-pencil"></i>email:
-              </h3>
-              <span>hello@knightstudios.com</span>
-            </div>
-            <div class="contact-info-box hours clearfix">
-              <h3>
-                <i class="fa fa-clock-o"></i>Hours:
-              </h3>
-              <span><strong>Monday - Thursday:</strong> 10am - 6pm
-                <br>
-                <strong>Friday:</strong> People work on Fridays now?
-                <br>
-                <strong>Saturday - Sunday:</strong> Best not to ask.</span>
-            </div>
-            <ul class="social-link">
-              <li class="twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li class="facebook">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li class="pinterest">
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-              </li>
-              <li class="gplus">
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </li>
-              <li class="dribbble">
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
-            <div class="form">
-              <div id="sendmessage">
-                Your message has been sent. Thank you!
-              </div>
-              <div id="errormessage">
-              </div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text"
-                         name="name"
-                         class="form-control input-text"
-                         id="name"
-                         placeholder="Your Name"
-                         data-rule="minlen:4"
-                         data-msg="Please enter at least 4 chars"/>
-                  <div class="validation">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="email"
-                         class="form-control input-text"
-                         name="email"
-                         id="email"
-                         placeholder="Your Email"
-                         data-rule="email"
-                         data-msg="Please enter a valid email"/>
-                  <div class="validation">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text"
-                         class="form-control input-text"
-                         name="subject"
-                         id="subject"
-                         placeholder="Subject"
-                         data-rule="minlen:4"
-                         data-msg="Please enter at least 8 chars of subject"/>
-                  <div class="validation">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control input-text text-area"
-                            name="message"
-                            rows="5"
-                            data-rule="required"
-                            data-msg="Please write something for us"
-                            placeholder="Message"></textarea>
-                  <div class="validation">
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="input-btn">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <footer class="footer">
+    {% include "themain/includes/contacts.html" %}
       <div class="container">
         <div class="footer-logo">
           <a href="#">
