@@ -55,9 +55,13 @@
       <!--main-section-start-->
       <div class="container">
         <h2>Услуги</h2>
-        <h6>Вы все еще сомневаетесь какая процедура необходима именно вам?
-          Разберем подробнее каждую, и подберем лучший вариант.
-        </h6>
+        <h3><p style="text-align: center">
+          Вы все еще сомневаетесь какая процедура необходима именно вам?<br>
+          Разберем подробнее каждую, и подберем лучший вариант. </p>
+        </h3>
+        <br>
+        <br>
+        <br>
         <div class="row">
           <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
             <div class="service-list">
@@ -77,7 +81,7 @@
                 <i class="fa fa-hand-o-right"></i>
               </div>
               <div class="service-list-col2">
-                <h3>Ботоксное разглаживание</h3>
+                <h3>Ботокс</h3>
                 <p><a href="{% url 'themain:botox_procedure' %}">
                   Сухость, сечение, ломкость и спутанность волос. Знакомо?
                   Пора принимать меры! Со всеми перечисленными проблемами
@@ -105,14 +109,14 @@
               </div>
               <div class="service-list-col2">
                 <h3>Советы по уходу за волосами</h3>
-                <p>
+                <p><a href="{% url 'themain:care_tips' %}">
                   Как поддержать эффект и продлить действие процедур?
-                  Читай полезные советы.
+                  Читай полезные советы.</a>
                 </p>
               </div>
             </div>
           </div>
-          <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+          <figure class="col-lg-7 col-sm-6  text-right wow fadeInUp delay-02s">
             <img src="{% static 'img/main1.jpg' %}" alt="">
           </figure>
         </div>
@@ -135,8 +139,9 @@
               волос (кератин, ботокс, нанопластика) создавались не
               только для кудрявых волос. Процедуры помогут решить проблемы
               разных типов волос. Если вас не устраивает хоть один из пунктов
-              ниже, то вам поможет одна из процедур. Какую выбрать? Запишитесь
-              на консультацию и мы подберем оптимальную процедуру конкретно для
+              ниже, то вам поможет одна из процедур. Какую выбрать?
+              <a href="#contact">Запишитесь
+              на консультацию</a> и мы подберем оптимальную процедуру конкретно для
               вашего типа волос.
             </p>
             <div class="featured-box">
@@ -314,15 +319,15 @@
     <section class="main-section client-part" id="client">
       <!--main-section client-part-start-->
       <div class="container">
-        <b class="quote-right wow fadeInDown delay-03"><i class="fa fa-quote-right"></i></b>
         <div class="row">
           <div class="col-lg-12">
+            <h2>
             <p class="client-part-haead wow fadeInDown delay-05">
-              It was a pleasure to work with the guys at Knight Studio. They made sure we were well fed and drunk all the time!
+              Дарим скидку 15 % на первое посещение.</h2>
             </p>
           </div>
         </div>
-        <ul class="client wow fadeIn delay-05s">
+        {% comment %} <ul class="client wow fadeIn delay-05s">
           <li>
             <a href="#">
               <img src="{% static 'img/client-pic1.jpg' %}" alt="">
@@ -333,41 +338,11 @@
             </a>
           </li>
         </ul>
+      </div> {% endcomment %}
       </div>
     </section>
     <!--main-section client-part-end-->
-    <div class="c-logo-part">
-      <!--c-logo-part-start-->
-      <div class="container">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="{% static 'img/c-liogo1.png' %}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{% static 'img/c-liogo2.png' %}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{% static 'img/c-liogo3.png' %}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{% static 'img/c-liogo4.png' %}" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{% static 'img/c-liogo5.png' %}" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
     <!--c-logo-part-end-->
     <section class="main-section team" id="team">
       <!--main-section team-start-->
@@ -470,14 +445,6 @@
       </div>
     </section>
     <!--main-section team-end-->
-    <section class="business-talking">
-      <!--business-talking-start-->
-      <div class="container">
-        <h2>
-          Let’s Talk Business.
-        </h2>
-      </div>
-    </section>
     <!--business-talking-end-->
     {% include "themain/includes/contacts.html" %}
       <div class="container">

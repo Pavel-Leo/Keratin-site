@@ -1,0 +1,135 @@
+{% include "base.html" %}
+{% load static %}
+<body>
+    <nav class="main-nav-outer" id="test">
+        <!--main-nav-start-->
+        <div class="container">
+            <ul class="main-nav">
+                <li>
+                    <a href="{% url 'themain:index' %}">Главная страница</a>
+                </li>
+                <li>
+                    <a href="{% url 'themain:botox_procedure' %}">Ботокс</a>
+                </li>
+                <li>
+                    <a href="{% url 'themain:keratin_procedure' %}">Кератин</a>
+                </li>
+                <li class="small-logo">
+                    <!-- <a href="#header">
+              <img src="{% static 'img/small-logo.png' %}" alt="">
+            </a>-->
+                </li>
+                <li>
+                    <a href="#client">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#team">Цены</a>
+                </li>
+                <li>
+                    <a href="#contact">Контакты</a>
+                </li>
+            </ul>
+            <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+        </div>
+    </nav>
+    <!--main-nav-end-->
+    <section class="main-section" id="service">
+        <!--main-section-start-->
+        <div class="container">
+            <h2>Нанопластика</h2>
+            <br>
+            <h3>
+                <p style="text-align: center">
+                    Что такое нанопластика волос, когда ее следует применять и в чем
+                    ее ключевые отличия от подобных процедур.
+                </h3>
+                <br>
+                <br>
+                <div class="row">
+                    <font color="black">
+                        <br>
+                        <div class="col-lg-5 col-sm-6 wow fadeInLeft delay-05s">
+                            <div class="service-list">
+                                <div class="service-list-col1">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="service-list-col2">
+                                    <font size="4">
+                                        <p>
+                                            Благодаря экологическому и безопасному составу,
+                                            процедура нанопластики наиболее подходит для беременных и
+                                            кормящих девушек,а также для детей.
+                                        </p>
+                                    </font>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="service-list">
+                                <div class="service-list-col1">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="service-list-col2">
+                                    <font size="4">
+                                        <p>
+                                            Подойдет для кудрявых, волнистых, пушистых, ломких, прямых
+                                            и неопрятных волос. Для нанопластики практически нет
+                                            ограничений по использованию.
+                                        </p>
+                                    </font>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="service-list">
+                                <div class="service-list-col1">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="service-list-col2">
+                                    <font size="4">
+                                        <p>
+                                            Можно завивать волосы и делать прически.
+                                            После выпрямления волосы становятся послушными и легко
+                                            поддаются укладке. Можно накручивать их на бигуди и даже на
+                                            плойку.
+                                        </p>
+                                    </font>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="service-list">
+                                <div class="service-list-col1">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="service-list-col2">
+                                    <font size="4">
+                                        <p>
+                                            Процедура не только выпрямляет волосы, но и закрывает кератиновые
+                                            чешуйки. Помогает вернуть ослабленным пористым волосам
+                                            мягкость, блеск и шелковистость.
+                                        </p>
+                                    </font>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="service-list">
+                                <div class="service-list-col1">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="service-list-col2">
+                                    <font size="4">
+                                        <p></p>
+                                        <p>Эффект от процедуры сохраняется от 6 до 12 месяцев!</p>
+                                    </font>
+                                </div>
+                            </div>
+                        </font>
+                    </div>
+                    <figure class="col-lg-7 col-sm-2  text-right wow fadeInUp delay-02s">
+                        <img src="{% static 'img/nano_plastic.jpg' %}">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!--main-section-end-->
+        <!--business-talking-end-->
+        {% include "themain/includes/contacts.html" %}
+        {% include "themain/includes/main_js.html" %}

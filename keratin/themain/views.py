@@ -33,3 +33,12 @@ def nano_plastic_procedure(request):
         "title": title,
     }
     return render(request, template, context)
+
+
+def care_tips(request):
+    template = "themain/care_tips.html"
+    title = "Советы по уходу"
+    context = {
+        "title": title,
+    }
+    return render(request, template, context)

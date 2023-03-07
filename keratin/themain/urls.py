@@ -11,5 +11,5 @@ urlpatterns = [
     ),
     path("botox_procedure/", views.botox_procedure, name="botox_procedure"),
     path("nano_plastic_procedure/", views.nano_plastic_procedure, name="nano_plastic_procedure"),
-    # path("care_tips/",views.care_tips, name="care_tips"),
+    path("care_tips/",views.care_tips, name="care_tips"),
 ]
