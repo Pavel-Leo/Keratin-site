@@ -97,8 +97,8 @@ p{
 
 .header{
 	text-align:center;
-	background:url('../img/pw_maze_black_2X.png') left top repeat;
-	padding:280px 0;
+	background:url('../img/2.png') top center no-repeat;
+	padding:260px 0;
 }
 .logo{
 	width:130px;
@@ -106,7 +106,7 @@ p{
 }
 .header h1{
 	font-family: 'Montserrat',sans-serif;
-	font-size:50px;
+	font-size:55px;
 	font-weight:400;
 	letter-spacing: -1px;
 	margin:0 0 22px 0 ;
@@ -124,7 +124,7 @@ p{
 	display:inline-block;
 	font-family: 'Montserrat',sans-serif;
 	font-size:14px;
-	color: #bcbcbc;
+	color: #474242;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin:0 5px 0 0;
@@ -181,8 +181,9 @@ color: #fff;
 	background:#fff;
 }
 .main-nav{
+	background:url('../img/nav.png') top center no-repeat;
 	text-align:center;
-	margin:10px 0 0px;
+	margin: -10px 0 0px;
 	padding:0;
 	list-style:none;
 }
@@ -213,7 +214,7 @@ color: #fff;
 }
 
 .main-section{
-	padding:90px 0 110px;
+	padding:70px 0 110px;
 }
 
 
@@ -401,9 +402,9 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url('../img/1.jpg') center center no-repeat;
+	background:url('../img/4.png') center center no-repeat;
 	background-size:cover;
-	padding:155px 0;
+	padding:120px 0;
 	text-align:center;
 }
 .client-part-haead{
@@ -493,13 +494,15 @@ border: 2px solid #fff;
 /* Team
 ---------------------------------*/
 .team-leader-block{
-	max-width:993px;
+	/* display: block; */
+	max-width:300px;
+	/* margin-left: auto;
+    margin-right: auto; */
 	margin:0 auto;
 }
 .team-leader-box{
-	width:30.66%;
 	margin-right: 3.82979%;
-	height: 490px;
+	height: 600px;
 	overflow: hidden;
 	text-align: center;
 	float: left;
@@ -507,15 +510,19 @@ border: 2px solid #fff;
 .team-leader-box span{
 	margin-bottom:24px;
 	display:block;
+
 }
 .team-leader-box:nth-of-type(3n+0){ margin:0;}
 .team-leader{
-	width:auto;
-	height:auto;
-	position:relative;
-	border-radius:50%;
-	box-shadow:0px 0px 0px 7px rgba(241,241,241,0.80);
-	margin:7px 7px 25px 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center; /* add this line */
+	width: auto;
+	height: auto;
+	position: relative;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 7px rgba(241, 241, 241, 0.80);
+	margin: 7px 7px 25px 7px;
 
 }
 .team-leader-shadow{
@@ -533,14 +540,16 @@ border: 2px solid #fff;
 	display:block;
 	width:100%;
 	height:100%;
+
 }
 .team-leader:hover .team-leader-shadow{
-	box-shadow:inset  0px 0px 0px 148px rgba(17,17,17,0.80);
+	box-shadow:inset  0px 0px 0px 140px rgba(17,17,17,0.80);
 }
 .team-leader:hover ul{ display:block; opacity:1}
 .team-leader img{
 	display:block;
 	border-radius:50%;
+	margin: 0 auto;
 }
 .team-leader ul{
 	display:block;
@@ -575,14 +584,14 @@ border: 2px solid #fff;
 .team-leader ul li a:hover, .team-leader ul li a:focus{
 	text-decoration:none;
 }
-.team-leader ul li a.fa-twitter:hover{
-	color:#55acee;
+.team-leader ul li a.fa-vk:hover{
+	color:#0000ff;
 }
-.team-leader ul li a.fa-facebook:hover{
-	color:#3b5998;
+.team-leader ul li a.fa-instagram:hover{
+	color:#dd4b39;
 }
-.team-leader ul li a.fa-pinterest:hover{
-	color:#cb2026;
+.team-leader ul li a.fa-telegram:hover{
+	color:#0000ff;
 }
 .team-leader ul li a.fa-google-plus:hover{
 	color:#dd4b39;
@@ -606,7 +615,7 @@ border: 2px solid #fff;
 }
 .contact-info-box h3{
 	font-size: 15px;
-	font-weight:400;
+	font-weight:200;
 	float:left;
 	width:102px;
 	margin-right:12px;
