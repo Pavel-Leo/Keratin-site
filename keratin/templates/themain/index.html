@@ -217,16 +217,36 @@
       </div>
     </section>
     <!--main-section alabaster-end-->
+    <div class="row justify-content-center">
+        <div class="col-md-8 p-5">
+    <a href="https://youtu.be/N4USVs-zERM" data-fancybox="gallery">
+        <img src = "{% static 'img/gal2.jpg' %}" alt ="picture 2">
+    </a>
+    <a href="https://youtu.be/7VI1F-8JDi4" data-fancybox="gallery">
+        <img src = "{% static 'img/gal3.jpg' %}" alt ="picture 2">
+    </a>
+{% comment %} <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
+    </script>{% endcomment %}
+
+    <script
+    src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js">
+    </script>
+
+</div>
+</div>
     <section class="main-section paddind" id="Portfolio">
       <!--main-section-start-->
       <div class="container">
         <h2>
           Portfolio
         </h2>
+        <br>
+
         <h6>
           Fresh portfolio of designs that will keep you wanting more.
         </h6>
-        <div class="portfolioFilter">
+         <div class="portfolioFilter">
           <ul class="Portfolio-nav wow fadeIn delay-02s">
             <li>
               <a href="#" data-filter="*" class="current">All</a>
@@ -248,8 +268,8 @@
       </div>
       <div class="portfolioContainer wow fadeInUp delay-04s">
         <div class=" Portfolio-box printdesign">
-          <a href="img/Portfolio-pic1.jpg">
-            <img src="{% static 'img/fen.jpg' %}" alt="">
+          <a href="{% static 'img/gal1.jpg' %}" data-fancybox="gallery">
+            <img src="{% static 'img/gal1_1.jpg' %}" alt="">
           </a>
           <h3>
             Foto Album
@@ -259,8 +279,8 @@
           </p>
         </div>
         <div class="Portfolio-box webdesign">
-          <a href="img/Portfolio-pic2.jpg">
-            <img src="{% static 'img/Portfolio-pic2.jpg' %}" alt="">
+          <a href="{% static 'img/fen.jpg' %}" data-fancybox="gallery">
+            <img src="{% static 'img/fen.jpg' %}" alt="">
           </a>
           <h3>
             Luca Theme
@@ -270,8 +290,8 @@
           </p>
         </div>
         <div class=" Portfolio-box branding">
-          <a href="img/Portfolio-pic3.jpg">
-            <img src="{% static 'img/Portfolio-pic3.jpg' %}" alt="">
+          <a href="{% static 'img/fen.jpg' %}" data-fancybox="gallery">
+            <img src="{% static 'img/fen.jpg' %}" alt="">
           </a>
           <h3>
             Uni Sans
@@ -281,8 +301,8 @@
           </p>
         </div>
         <div class=" Portfolio-box photography">
-          <a href="img/Portfolio-pic4.jpg">
-            <img src="{% static 'img/Portfolio-pic4.jpg' %}" alt="">
+          <a href="{% static 'img/fen.jpg' %}" data-fancybox="gallery">
+            <img src="{% static 'img/fen.jpg' %}" alt="">
           </a>
           <h3>
             Vinyl Record
@@ -292,8 +312,8 @@
           </p>
         </div>
         <div class=" Portfolio-box branding">
-          <a href="img/Portfolio-pic5.jpg">
-            <img src="{% static 'img/Portfolio-pic5.jpg' %}" alt="">
+          <a href="{% static 'img/fen.jpg' %}" data-fancybox="gallery">
+            <img src="{% static 'img/fen.jpg' %}" alt="">
           </a>
           <h3>
             Hipster
@@ -303,8 +323,8 @@
           </p>
         </div>
         <div class=" Portfolio-box photography">
-          <a href="img/Portfolio-pic6.jpg">
-            <img src="{% static 'img/Portfolio-pic6.jpg' %}" alt="">
+          <a data-fancybox href="https://www.youtube.com/watch?v=C9PjSRgpEZ4">
+            <img src="{% static 'img/fen.jpg' %}" alt="">
           </a>
           <h3>
             Windmills
@@ -372,63 +392,6 @@
               в контактной информации.</font>
             </p>
           </div>
-            {% comment %} <div class="team-leader-box">
-            <div class="team-leader  wow fadeInDown delay-06s">
-              <div class="team-leader-shadow">
-                <a href="#"></a>
-              </div>
-              <ul>
-                <li>
-                  <a href="#" class="fa fa-twitter"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-facebook"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-pinterest"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-google-plus"></a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="wow fadeInDown delay-06s">
-              Jesse Pinkman
-            </h3>
-            <span class="wow fadeInDown delay-06s">Product Manager</span>
-            <p class="wow fadeInDown delay-06s">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
-            </p>
-          </div>
-          <div class="team-leader-box">
-            <div class="team-leader wow fadeInDown delay-09s">
-              <div class="team-leader-shadow">
-                <a href="#"></a>
-              </div>
-              <img src="{% static 'img/team-leader-pic3.jpg' %}" alt="">
-              <ul>
-                <li>
-                  <a href="#" class="fa fa-twitter"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-facebook"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-pinterest"></a>
-                </li>
-                <li>
-                  <a href="#" class="fa fa-google-plus"></a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="wow fadeInDown delay-09s">
-              Skyler white
-            </h3>
-            <span class="wow fadeInDown delay-09s">Accountant</span>
-            <p class="wow fadeInDown delay-09s">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
-            </p>
-          </div> {% endcomment %}
         </div>
       </div>
     </section>
