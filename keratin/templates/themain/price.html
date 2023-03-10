@@ -1,0 +1,43 @@
+{% include "base.html" %}
+{% load static %}
+<body>
+    <nav class="main-nav-outer" id="test">
+        <!--main-nav-start-->
+        <div class="container">
+            <ul class="main-nav">
+                <li>
+                    <a href="{% url 'themain:index' %}">Главная страница</a>
+                </li>
+                <li>
+                    <a href="{% url 'themain:keratin_procedure' %}">Кератин</a>
+                </li>
+                <li>
+                    <a href="{% url 'themain:botox_procedure' %}">Ботокс</a>
+                </li>
+                <li>
+                    <a href="{% url 'themain:nano_plastic_procedure' %}">Нанопластика</a>
+                </li>
+                <li>
+                    <a href="#contact">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--main-nav-end-->
+    <section class="main-section" id="service">
+        <!--main-section-start-->
+        <div class="container"
+             style="width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center">
+            <figure class="col-lg-5 col-sm-5  text-center wow fadeInUp delay-02s">
+                <img src="{% static 'img/price.jpg' %}">
+            </figure>
+        </div>
+    </section>
+</body>
+<!--main-section-end-->
+{% include "themain/includes/contacts.html" %}
+{% include "themain/includes/main_js.html" %}

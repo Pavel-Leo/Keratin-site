@@ -493,10 +493,7 @@ border: 2px solid #fff;
 /* Team
 ---------------------------------*/
 .team-leader-block{
-	/* display: block; */
 	max-width:300px;
-	/* margin-left: auto;
-    margin-right: auto; */
 	margin:0 auto;
 }
 .team-leader-box{
@@ -515,7 +512,7 @@ border: 2px solid #fff;
 .team-leader{
 	display: flex;
 	justify-content: center;
-	align-items: center; /* add this line */
+	align-items: center;
 	width: auto;
 	height: auto;
 	position: relative;
@@ -763,21 +760,21 @@ border: 2px solid #fff;
 ---------------------------------*/
 
 .footer{
-	background:url('../img/pw_maze_black_2X.png') left top repeat;
-	padding:35px 0 35px;
+	background:url('../img/try.png') top center no-repeat;
+	padding:15px 0 15px;
 }
 .footer-logo{
 	margin:15px auto 35px;
 	width: 76px;
 }
 .copyright, .credits{
-	color:#cccccc;
+	color:#0a0a0a;
 	font-size:14px;
 	display:block;
 	text-align:center;
 }
 .copyright a, .credits a{
-	color:#7cc576;
+	color:#0a0a0a;
 	font-weight:600;
 	text-decoration: none;
 	transition:all 0.3s ease-in-out;
@@ -859,3 +856,38 @@ border: 2px solid #fff;
 	animation-delay: 1.2s;
 	-webkit-animation-delay: 1.2s;
 }
+
+
+/*======================
+    404 page
+=======================*/
+
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+
+ background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+
+
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+
+  .four_zero_four_bg h3{
+       font-size:80px;
+       }
+
+       .link_404{
+  color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;}
+  .contant_box_404{ margin-top:-50px;}

@@ -42,3 +42,12 @@ def care_tips(request):
         "title": title,
     }
     return render(request, template, context)
+
+
+def price(request):
+    template = "themain/price.html"
+    title = "Прайс"
+    context = {
+        "title": title,
+    }
+    return render(request, template, context)

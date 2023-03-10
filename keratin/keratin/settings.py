@@ -25,7 +25,13 @@ SECRET_KEY = "$bc(9%2)#xlcz6ej+st6i=)sggam*rrh#4b_cn9%g0#re%lfqv"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "www.pashokify.pythonanywhere.com",
+    "pashokify.pythonanywhere.com",
+    "localhost",
+    "127.0.0.1",
+    "[::1]",
+    "testserver",]
 
 
 # Application definition
@@ -38,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "themain.apps.ThemainConfig",
+    "core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [
@@ -64,6 +71,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "core.context_processors.year.year",
             ],
         },
     },
