@@ -51,3 +51,12 @@ def price(request):
         "title": title,
     }
     return render(request, template, context)
+
+
+def about(request):
+    template = "core/404.html"
+    title = "О нас"
+    context = {
+        "title": title,
+    }
+    return render(request, template, context)
