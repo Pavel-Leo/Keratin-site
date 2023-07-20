@@ -59,5 +59,6 @@ pip install -r requirements.txt
 python3 manage.py runserver (для mac и linux)
 python manage.py runserver (для windows)
 ```
+
 ### Авторы
 Леонтьев Павел
